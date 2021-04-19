@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.btn {
+    margin: 40px;
+    padding: 10px 20px;
+    background-color: steelblue;
+    font-size: 18px;
+    border: transparent;
+    color: white;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+}
+
+.btn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: -1;
+
+    transition: transform 300ms ease-in-out;
+}
+
+
+.first-btn::after {
+    transform: scaleX(0);
+    transform-origin: left;
+}
+.first-btn:hover::after {
+    transform: scaleX(1);
+}
+
+.second-btn::after {
+    transform: scaleY(0);
+    transform-origin: top;
+}
+.second-btn:hover::after {
+    transform: scaleX(1);
+}
+
+.third-btn::after {
+    transform: scale(0);
+    transform-origin: center;
+}
+.third-btn:hover::after {
+    transform: scaleX(1);
+}
+
+.second-btns .btn {
+    background-color: rgb(255, 176, 39);
+}
+
+.fourth-btn::after {
+    transform: scaleX(0);
+    transform-origin: right;
+}
+.fourth-btn:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.fifth-btn::after {
+    transform: scaleX(0);
+    transform-origin: left;
+}
+.fifth-btn:hover::after {
+    transform: scaleX(1);
+    transform-origin: right;
+}
+
+.sixth-btn::after {
+    transform: scaleY(0);
+    transform-origin: top;
+}
+.sixth-btn:hover::after {
+    transform: scaleY(1);
+    transform-origin: bottom;
+}
